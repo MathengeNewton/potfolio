@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Newton's</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <!--My day's chart-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {
+                'packages': ['corechart']
+            });
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+
+                var data = google.visualization.arrayToDataTable([
+                    ['Task', 'Hours per Day'],
+                    ['Code', 4],
+                    ['Study', 2],
+                    ['work on ideas', 2],
+                    ['learn new things', 2],
+                    ['Rest/relax', 8],
+                    ['chore & errands', 2],
+                    ['Other staff', 2]
+                ]);
+
+                var options = {
+                    title: 'This is how I spend my days:'
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+                chart.draw(data, options);
+            }
+        </script>
+</head>
+
+<body>
+    <!--navigation bar------->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="nav-brand" href="#"><img src="images/th (1).jpg" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" active>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="code.html">Code center</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--resume parts-->
+<div class="container-fluid padding">
+    <div class="row text-center">
+        <div class="col-lg-8">
+
+            <h2>Newton Muchugu Mathenge</h2>
+            <hr class="about">
+            <h4>Web developer/upcoming software engineer</h4>
+            <div class="col-sm-3">
+                <h3>Education.</h3>
+            </div>
+            <hr class="About">
+            <div class="col-sm-3">
+                <h4>Degree/Diploma</h4>
+            </div>
+            <div class="col-sm-4">
+                <i class="fa fa-map-marker">Mount Kenya University:</i>
+                <i class="fa fa-calendar">2017-2020 </i><br><br>
+                <i class="fa fa-graduation-cap"> Barchelor's degree in information technology</i><br>
+                
+            </div>
+            <hr class="about">
+               <h4>Background and skills.</h4>
+             <u><h5>Programing Background</h5></u>
+               <p>I first started programing with C# programing language which turned out to be difficult
+                    at the begining because i di not have any other programing experience. I latter moved 
+                    on to HTML and css which became a bit easier and understandable, creating a base for 
+                    me liking the art.Later i did programing with visual basics which opened up my mind 
+                    to vewing programing as an art rather than as a science by bing ablt to create things 
+                    that actually solved a problem i could see. In 2018 i decided to teach myself something
+                    extra from what was taught at school. I picked up PHP and have been studying it since 
+                    then i later did a course on java and javascript which i also decided to learn. Along
+                    the way i learned python and grew an interest in it and intend to learn it as i continue.  
+                </p>
+               <u> <h5>Other skills</h5></u>
+                <p>
+                    Other than programing, i am well conversant with computer hardware and software, 
+                    i have networking skills and also some knowledge of databases SQL databases to be 
+                    specific.<br>
+                    In additional to this i have exelent inter person skills, i am a team player and can work 
+                    under pressure.
+                </p>
+                <hr class="about">
+                <div id="piechart" style="width: 900px; height: 500px;"></div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="row">
+                <h4>Knowledge in</h4>
+                <hr class="about">
+                <div class="col-sm-2">
+                    <p>PHP</p>
+                    <hr class="about">
+                </div>
+                <div class="col-sm-2">
+                    <p>Java</p>
+                    <hr class="about">
+                </div>
+                <div class="col-sm-2">
+                    <p>javascript</p>
+                    <hr class="about">
+                </div>
+                <div class="col-sm-2">
+                    <p>SQL</p>
+                    <hr class="about">
+                </div>
+                <div class="col-sm-2">
+                    <p>HTML</p>
+                    <hr class="about">
+                </div>
+                <div class="col-sm-2">
+                    <p>CSS</p>
+                    <hr class="about">
+                </div>
+                <div class="col-sm-2">
+                    <p>Bootsrap</p>
+                    <hr class="about">
+                </div>
+                <div class="col-sm-2">
+                    <p>Git</p>
+                    <hr class="about">
+                </div>
+            </div>
+            
+            <div class="passions">
+                <hr class="about">
+                <h4>Passions</h4>
+                <hr class="about">
+             <div class="col-lg-4">
+                <i class="fa fa-code" aria-hidden="true">Code</i>
+               </div>
+             
+            <div class="col-lg-4">
+                <i class="fa fa-futbol-o">Soccer</i>
+                <hr class="about">
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <h2>Call/Text</h2>
+                    <hr class="about">
+                    <div class="col-lg-4">
+                        <i class="fa fa-mobile" >+254798954562</i><br>
+                        <i class="fa fa-envelope-o">rexynewton79@gmail</i>
+                    </div>    
+                    <hr class="about">                
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <hr class="about">
+                    <h4>Interests in:</h4>
+                    <ol>
+                        <li>
+                            Python Data science.
+                        </li>
+                        <li>
+                            Artificial Inteligence.
+                        </li>
+                        <li>
+                            Swift IOS Development.
+                        </li>
+                    </ol> 
+                    <hr class="about">                       
+                </div>
+            </div>
+            </div>           
+        </div>
+    </div>
+
+</div>
+<!---connect-->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+
+        <div class="col-12">
+            <hr class="dark">
+            <h2>Connect </h2>
+        </div>
+        <div class="col-12 social padding">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter-square"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+
+        </div>
+
+    </div>
+</div>
+<!--footer------->
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="images/th (1).jpg" />
+                <hr class="light">
+                <p>P.O Box 75488</p>
+                <p>Nairobi-Kenya</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Services offered:</h5>
+                <hr class="light">
+
+                <p>Front end web development</p>
+                <p>Overal web design and development</p>
+                <p>Database management services</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>My working hours:</h5>
+                <hr class="light">
+
+                <p>weekdays: 8am-10pm</p>
+                <p>weekends: 10am-3pm</p>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h5>&copy; newtonMasterminds.com</h5>
+            </div>
+        </div>
+</footer>
+</body>
+
+</html>
